@@ -44,4 +44,10 @@ public class MainConfig {
     {
         return new Movie(actor());
     }
+
+    @Bean(initMethod = "customInit",destroyMethod = "customDestroy")
+    public BeanLifecycleDemoBean beanLifecycleDemoBean()
+    {
+        return new BeanLifecycleDemoBean();
+    }
 }
