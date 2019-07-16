@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.stackroute")
 public class MainConfig {
 
-    @Bean
+  /*  @Bean
     public Actor actor()
     {
         Actor actor=new Actor();
@@ -18,15 +18,18 @@ public class MainConfig {
         actor.setGender("Male");
         actor.setAge(43);
         return actor;
+    }*/
+
+    @Bean
+    public Actor actor()
+    {
+        return new Actor("Vineet","Male",22);
     }
 
 
     @Bean
     public Movie movie()
     {
-        Movie movie=new Movie();
-        movie.setActor(actor());
-
-        return movie;
+        return new Movie(actor());
     }
 }
