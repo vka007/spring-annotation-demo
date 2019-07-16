@@ -42,6 +42,6 @@ public class MainConfig {
     @Bean
     public Movie movie()
     {
-        return new Movie(actor(),actor1(),actor2());
+        return new Movie(actor());
     }
 }
