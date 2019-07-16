@@ -26,10 +26,22 @@ public class MainConfig {
         return new Actor("Vineet","Male",22);
     }
 
+    @Bean
+    public Actor actor1()
+    {
+        return new Actor("Akash","Male",21);
+    }
+
+    @Bean
+    public Actor actor2()
+    {
+        return new Actor("Raj","Male",24);
+    }
+
 
     @Bean
     public Movie movie()
     {
-        return new Movie(actor());
+        return new Movie(actor(),actor1(),actor2());
     }
 }
